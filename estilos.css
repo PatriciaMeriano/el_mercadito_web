@@ -1,0 +1,70 @@
+:root {
+  --primary: #5c4033;
+  --accent: #e9c241;
+  --bg: #f0f0de;
+  --text: #0b0707;
+  --card-bg: #f1f3ec;
+  --card-border: #74351f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+
+header {
+  background-image: linear-gradient(rgba(193, 164, 164, 0.4), rgba(0, 0, 0, 0.4)), url('./imagenes/despensa.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #eed742;
+  text-align: center;
+  padding: 3.5rem 1rem;
+  border-bottom: 4px solid var(--accent);
+}
+
+
+.grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+  gap: 1.5rem; 
+  margin-bottom: 3rem; 
+}
+
+.card { 
+  background: var(--card-bg); 
+  padding: 1.8rem 1.5rem; 
+  border-radius: 12px; 
+  border: 1px solid var(--card-border); 
+  box-shadow: 25px 20px 25px rgba(30, 24, 21, 0.18); 
+  text-align: center; 
+  transition: transform 0.2s, box-shadow 1ms; 
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-container { margin-bottom: 1rem; }
+.logo-container img { width: 130px; height: 130px; border-radius: 50%; object-fit: contain; background-color: #f6d155; border: 4px solid #fff8f0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); padding: 5px; }
+header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.3rem; letter-spacing: 1px; }
+header p { font-size: 1.1rem; opacity: 0.9; }
+.container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+.section-title { color: var(--primary); text-align: center; font-size: 1.8rem; margin-bottom: 1.5rem; }
+
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(92, 64, 51, 0.1); }
+.card-link { text-decoration: none; color: inherit; display: block; }
+.card-icon { font-size: 2.5rem; margin-bottom: 0.5rem; display: inline-block; }
+.card h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.3rem; }
+.card p { color: #666; font-size: 0.95rem; }
+.badge-click { display: inline-block; margin-top: 1rem; font-size: 0.85rem; color: var(--accent); font-weight: bold; }
+.info-section { background: var(--card-bg); padding: 2.5rem 2rem; border-radius: 12px; border: 1px solid var(--card-border); box-shadow: 0 4px 6px rgba(92, 64, 51, 0.05); margin-bottom: 2rem; text-align: center; }
+.info-section h2 { color: var(--primary); margin-bottom: 1rem; font-size: 1.6rem; }
+.info-section p { max-width: 600px; margin: 0 auto 1.5rem auto; color: #555; }
+.cta-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1.5rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+.btn-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
+.btn-whatsapp { background-color: #25d366; color: white; }
+footer { text-align: center; padding: 2rem 1rem; font-size: 0.9rem; color: #6d4c41; border-top: 1px solid var(--card-border); background-color: #f1eae1; }
+
+.btn-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: rgb(16, 15, 15); }
+.btn-whatsapp { background-color: #25d366; color: rgb(27, 26, 26); }
+.btn-shop { background-color: var(--accent); color: rgb(23, 23, 23); }
