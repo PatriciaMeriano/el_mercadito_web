@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofertas de la semana - El Mercadito</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="tema.css">
+  <link rel="stylesheet" href="carrito.css">
+  <script src="carrito.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="./imagenes/logo.jpeg" alt="Logo El Mercadito Despensa">
+    </div>
+    <h1>EL MERCADITO</h1>
+    <p>Despensa & Almacén de Barrio</p>
+    <p>Sarmiento 1926</p>
+    <p>WhatsApp 3442 311926</p>
+  </header>
+
+  <div class="container">
+    <div class="back-nav"><a href="index.html" class="back-btn">&larr; Volver al inicio</a></div>
+    <h2 class="section-title">🏷️ Ofertas de la semana</h2>
+    <p class="section-desc">Agregalas al carrito y mandá tu pedido por WhatsApp.</p>
+
+    <div class="scroll-container">
+
+      <!-- CÓMO CARGAR UNA OFERTA
+           1. Guardá la foto del producto en la carpeta "imagenes" (por ejemplo oferta-yerba.jpg).
+           2. Copiá un bloque <div class="product-card oferta"> ... </div> completo y pegalo a continuación.
+           3. Cambiá: la foto (src y alt), el nombre, el detalle, los precios y los datos del botón:
+                data-id      -> un nombre único, sin espacios (oferta-yerba, oferta-aceite...)
+                data-nombre  -> el nombre que va a aparecer en el carrito
+                data-precio  -> el precio de oferta, solo el número (por ejemplo 4500). Si no lo ponés, en el carrito figura "A consultar".
+           4. Para sacar una oferta vencida, borrá su bloque completo.
+           Después de completar todo, buscá "COMPLETAR" (Ctrl + Shift + F) para no dejar ninguna marca. -->
+
+      <div class="product-card oferta">
+        <span class="oferta-etiqueta">OFERTA</span>
+        <img src="./imagenes/oferta-ejemplo.svg" alt="Foto del producto en oferta" class="product-img">
+        <div class="product-content">
+          <h3><span class="completar">[COMPLETAR: nombre del producto]</span></h3>
+          <p><span class="completar">[COMPLETAR: detalle y hasta cuándo vale]</span></p>
+          <div class="product-footer">
+            <span class="product-price">
+              <del class="precio-anterior"><span class="completar">[COMPLETAR: precio anterior]</span></del>
+              <strong><span class="completar">[COMPLETAR: precio de oferta]</span></strong>
+            </span>
+            <button type="button" class="btn-buy btn-agregar"
+                    data-id="oferta-1"
+                    data-nombre="COMPLETAR: nombre de la oferta 1"
+                    data-precio="0">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card oferta">
+        <span class="oferta-etiqueta">OFERTA</span>
+        <img src="./imagenes/oferta-ejemplo.svg" alt="Foto del producto en oferta" class="product-img">
+        <div class="product-content">
+          <h3><span class="completar">[COMPLETAR: nombre del producto]</span></h3>
+          <p><span class="completar">[COMPLETAR: detalle y hasta cuándo vale]</span></p>
+          <div class="product-footer">
+            <span class="product-price">
+              <del class="precio-anterior"><span class="completar">[COMPLETAR: precio anterior]</span></del>
+              <strong><span class="completar">[COMPLETAR: precio de oferta]</span></strong>
+            </span>
+            <button type="button" class="btn-buy btn-agregar"
+                    data-id="oferta-2"
+                    data-nombre="COMPLETAR: nombre de la oferta 2"
+                    data-precio="0">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card oferta">
+        <span class="oferta-etiqueta">OFERTA</span>
+        <img src="./imagenes/oferta-ejemplo.svg" alt="Foto del producto en oferta" class="product-img">
+        <div class="product-content">
+          <h3><span class="completar">[COMPLETAR: nombre del producto]</span></h3>
+          <p><span class="completar">[COMPLETAR: detalle y hasta cuándo vale]</span></p>
+          <div class="product-footer">
+            <span class="product-price">
+              <del class="precio-anterior"><span class="completar">[COMPLETAR: precio anterior]</span></del>
+              <strong><span class="completar">[COMPLETAR: precio de oferta]</span></strong>
+            </span>
+            <button type="button" class="btn-buy btn-agregar"
+                    data-id="oferta-3"
+                    data-nombre="COMPLETAR: nombre de la oferta 3"
+                    data-precio="0">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; El Mercadito - Despensa. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

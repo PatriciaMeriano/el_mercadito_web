@@ -1,6 +1,16 @@
 /* Estilos extra de nosotros.html.
-   Se cargan después de estilos.css; no modifican nada de las otras páginas. */
+   Se cargan después de estilos.css y tema.css; no modifican nada de las otras páginas. */
 
+:root {
+  --nos-amarillo: #ffde59;
+  --nos-amarillo-fuerte: #f6d155;
+  --nos-amarillo-suave: #fff6c2;
+  --nos-crema: #fff8f0;
+  --nos-tinta: #2b2b2b;
+  --nos-borde: #eadfb8;
+}
+
+/* ---------- Menú de la página ---------- */
 .info-nav {
   display: flex;
   flex-wrap: wrap;
@@ -9,59 +19,141 @@
 }
 
 .info-nav a {
-  padding: 8px 14px;
-  border: 1px solid #eadfb8;
-  background: #fff;
+  padding: 8px 16px;
+  border: 2px solid var(--nos-amarillo);
   border-radius: 999px;
-  color: inherit;
-  text-decoration: none;
+  background: var(--nos-amarillo);
+  color: var(--nos-tinta);
   font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .info-nav a:hover,
 .info-nav a:focus-visible {
-  border-color: var(--carrito-color, #c8321f);
-  color: var(--carrito-color, #c8321f);
+  border-color: var(--nos-tinta);
+  background: var(--nos-tinta);
+  color: var(--nos-amarillo);
 }
 
-.info-bloque {
-  margin: 0 0 32px;
-  padding-top: 8px;
+/* ---------- Recuadros que se abren y se cierran ---------- */
+.acordeon {
+  margin: 0 0 14px;
+  overflow: hidden;
+  border: 2px solid var(--nos-amarillo);
+  border-radius: 14px;
+  background: var(--nos-crema);
+  box-shadow: 0 4px 14px rgba(43, 33, 24, 0.1);
   scroll-margin-top: 16px;
 }
 
-.info-bloque h2 {
-  margin: 0 0 12px;
+.acordeon > summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--nos-amarillo);
+  color: var(--nos-tinta);
+  cursor: pointer;
+  list-style: none;
+  transition: background 0.15s ease;
 }
 
-.info-bloque h3 {
-  margin: 20px 0 8px;
+.acordeon > summary::-webkit-details-marker {
+  display: none;
 }
 
-.info-bloque p {
+.acordeon > summary:hover {
+  background: var(--nos-amarillo-fuerte);
+}
+
+/* Flechita que gira al abrir */
+.acordeon > summary::after {
+  content: "";
+  flex: none;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px 3px auto;
+  border-right: 3px solid var(--nos-tinta);
+  border-bottom: 3px solid var(--nos-tinta);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.acordeon[open] > summary {
+  border-bottom: 4px solid var(--nos-tinta);
+}
+
+.acordeon[open] > summary::after {
+  margin-bottom: -3px;
+  transform: rotate(-135deg);
+}
+
+.acordeon-icono {
+  flex: none;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.acordeon-titulo {
+  margin: 0;
+  color: var(--nos-tinta);
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.acordeon-cuerpo {
+  padding: 16px 18px 18px;
+}
+
+.acordeon-cuerpo > :first-child {
+  margin-top: 0;
+}
+
+.acordeon-cuerpo > :last-child {
+  margin-bottom: 0;
+}
+
+.acordeon-cuerpo p {
   line-height: 1.55;
 }
 
-/* Horarios */
+.acordeon-cuerpo h3 {
+  margin: 20px 0 8px;
+  color: var(--nos-tinta);
+}
+
+.acordeon-cuerpo h3:first-child {
+  margin-top: 0;
+}
+
+/* ---------- Horarios ---------- */
 .horarios {
   width: 100%;
   max-width: 520px;
   margin: 12px 0 20px;
   border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .horarios th,
 .horarios td {
   padding: 10px 12px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--nos-borde);
   text-align: left;
 }
 
 .horarios th {
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* Mapa */
+.horarios tr:nth-child(odd) {
+  background: var(--nos-amarillo-suave);
+}
+
+/* ---------- Mapa ---------- */
 .mapa {
   max-width: 720px;
 }
@@ -70,16 +162,16 @@
   display: block;
   width: 100%;
   height: 320px;
-  border: 0;
-  border-radius: 8px;
+  border: 3px solid var(--nos-amarillo);
+  border-radius: 10px;
 }
 
 .enlace-mapa {
-  color: var(--carrito-color, #c8321f);
-  font-weight: 600;
+  color: var(--nos-tinta);
+  font-weight: 700;
 }
 
-/* Pasos y listas */
+/* ---------- Pasos y listas ---------- */
 .pasos {
   margin: 0;
   padding-left: 22px;
@@ -90,9 +182,14 @@
   margin-top: 6px;
 }
 
+.pasos li::marker {
+  color: var(--nos-tinta);
+  font-weight: 700;
+}
+
 .datos dt {
   margin-top: 12px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .datos dd {
@@ -106,7 +203,11 @@
   line-height: 1.8;
 }
 
-/* Quiénes somos */
+.lista-simple li::marker {
+  color: var(--nos-tinta);
+}
+
+/* ---------- Quiénes somos ---------- */
 .foto-local {
   margin: 0 0 16px;
   max-width: 720px;
@@ -116,10 +217,11 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border: 3px solid var(--nos-amarillo);
+  border-radius: 10px;
 }
 
-/* Ofertas */
+/* ---------- Ofertas ---------- */
 .promos {
   display: grid;
   gap: 16px;
@@ -128,8 +230,8 @@
 
 .promo {
   padding: 16px;
-  border: 1px solid #eadfb8;
-  border-top: 5px solid #eed742;
+  border: 1px solid var(--nos-borde);
+  border-top: 6px solid var(--nos-amarillo);
   border-radius: 12px;
   background: #fff;
 }
@@ -142,32 +244,46 @@
   margin: 0;
 }
 
-/* Preguntas frecuentes */
-#faq details {
-  max-width: 720px;
-  border-bottom: 1px solid #ddd;
+/* ---------- Preguntas frecuentes (recuadros chicos dentro del recuadro) ---------- */
+.pregunta {
+  margin: 0 0 8px;
+  overflow: hidden;
+  border: 1px solid var(--nos-borde);
+  border-radius: 10px;
+  background: #fff;
 }
 
-#faq summary {
-  padding: 14px 0;
-  font-weight: 600;
+.pregunta > summary {
+  padding: 12px 14px;
+  background: var(--nos-amarillo-suave);
+  font-weight: 700;
   cursor: pointer;
 }
 
-#faq summary:focus-visible {
-  outline: 3px solid #2b2118;
-  outline-offset: 2px;
+.pregunta > summary:hover {
+  background: var(--nos-amarillo);
 }
 
-#faq details p {
-  margin: 0 0 14px;
+.pregunta[open] > summary {
+  border-left: 5px solid var(--nos-tinta);
 }
 
-/* Texto que falta completar: resaltado para no olvidarse de reemplazarlo.
-   Buscá "COMPLETAR" en VS Code (Ctrl + Shift + F) y borrá estas marcas antes de publicar. */
+.pregunta > p {
+  margin: 0;
+  padding: 12px 14px;
+}
+
+/* ---------- Texto que falta completar ----------
+   Se marca en blanco con borde punteado e itálica para que se note entre los amarillos del sitio.
+   Buscá "COMPLETAR" en VS Code (Ctrl + Shift + F) y reemplazá cada marca antes de publicar. */
 .completar {
-  background: #fff3a3;
-  color: #222;
+  padding: 0 4px;
+  border: 1px dashed var(--nos-tinta);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--nos-tinta);
+  font-style: italic;
+  font-weight: 700;
 }
 
 .solo-lectores {
@@ -177,4 +293,12 @@
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .info-nav a,
+  .acordeon > summary,
+  .acordeon > summary::after {
+    transition: none;
+  }
 }

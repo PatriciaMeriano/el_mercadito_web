@@ -1,11 +1,13 @@
 /* Estilos del carrito de El Mercadito.
    Cambiá estos colores para que combinen con estilos.css */
 :root {
-  --carrito-color: #c8321f;
-  --carrito-color-texto: #ffffff;
+  --carrito-color: #2b2b2b;
+  --carrito-color-texto: #ffde59;
   --carrito-fondo-panel: #ffffff;
   --carrito-texto: #222222;
   --carrito-borde: #dddddd;
+  --carrito-verde: #15803d;        /* botones de WhatsApp */
+  --carrito-verde-oscuro: #0f6a31;
 }
 
 .carrito-boton {
@@ -30,7 +32,7 @@
 .carrito-boton:focus-visible,
 .carrito-panel button:focus-visible,
 .btn-agregar:focus-visible {
-  outline: 3px solid #2b2118;
+  outline: 3px solid #2b2b2b;
   outline-offset: 2px;
 }
 
@@ -89,7 +91,11 @@
 
 .carrito-cabecera h2 {
   margin: 0;
+  color: var(--carrito-texto);
   font-size: 1.25rem;
+  text-align: left;
+  text-shadow: none;
+  letter-spacing: normal;
 }
 
 .carrito-cerrar {
@@ -151,7 +157,7 @@
   padding: 0 10px;
   border-color: transparent;
   background: none;
-  color: #a33;
+  color: var(--carrito-color);
   text-decoration: underline;
 }
 
@@ -182,9 +188,16 @@
   color: var(--carrito-color);
 }
 
+/* Botones que llevan a WhatsApp: verde */
 .carrito-enviar {
-  background: var(--carrito-color);
-  color: var(--carrito-color-texto);
+  border-color: var(--carrito-verde);
+  background: var(--carrito-verde);
+  color: #fff;
+}
+
+.carrito-enviar:hover:not(:disabled) {
+  border-color: var(--carrito-verde-oscuro);
+  background: var(--carrito-verde-oscuro);
 }
 
 .carrito-pie button:disabled {
@@ -235,7 +248,7 @@
 .carrito-datos input[type="text"]:focus-visible,
 .carrito-datos select:focus-visible,
 .carrito-datos textarea:focus-visible {
-  outline: 3px solid #2b2118;
+  outline: 3px solid #2b2b2b;
   outline-offset: 1px;
 }
 
@@ -264,8 +277,8 @@
 .carrito-error {
   min-height: 1.2em;
   margin: 0;
-  color: #a33;
-  font-weight: 600;
+  color: var(--carrito-color);
+  font-weight: 700;
 }
 
 .carrito-datos button {
@@ -278,8 +291,14 @@
 }
 
 .carrito-confirmar {
-  background: var(--carrito-color);
-  color: var(--carrito-color-texto);
+  border-color: var(--carrito-verde);
+  background: var(--carrito-verde);
+  color: #fff;
+}
+
+.carrito-confirmar:hover {
+  border-color: var(--carrito-verde-oscuro);
+  background: var(--carrito-verde-oscuro);
 }
 
 .carrito-volver {

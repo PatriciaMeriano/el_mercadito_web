@@ -119,16 +119,16 @@
     panel.className = "carrito-panel";
     panel.setAttribute("aria-label", "Carrito de compras");
     panel.innerHTML = `
-      <header class="carrito-cabecera">
+      <div class="carrito-cabecera">
         <h2 class="carrito-titulo">Tu pedido</h2>
         <button type="button" class="carrito-cerrar" aria-label="Cerrar carrito">&times;</button>
-      </header>
+      </div>
       <ul class="carrito-lista"></ul>
-      <footer class="carrito-pie">
+      <div class="carrito-pie">
         <p class="carrito-total">Total: <strong>$0</strong></p>
         <button type="button" class="carrito-vaciar">Vaciar carrito</button>
         ${WHATSAPP ? '<button type="button" class="carrito-enviar">Hacer pedido</button>' : ""}
-      </footer>
+      </div>
       ${WHATSAPP ? `
       <form class="carrito-datos" hidden novalidate>
         <label>Nombre

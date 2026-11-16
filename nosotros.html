@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Horarios, envíos y más - El Mercadito</title>
   <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="tema.css">
   <link rel="stylesheet" href="nosotros.css">
   <link rel="stylesheet" href="carrito.css">
   <script src="carrito.js" defer></script>
@@ -30,137 +31,148 @@
       <a href="#pedidos">Cómo pedir</a>
       <a href="#pagos">Medios de pago</a>
       <a href="#nosotros">Quiénes somos</a>
-      <a href="#ofertas">Ofertas</a>
+      <a href="ofertas.html">Ofertas</a>
       <a href="#faq">Preguntas frecuentes</a>
     </nav>
 
+    <!-- Cada sección es un recuadro que se abre y se cierra (<details>).
+         Para que una sección aparezca abierta al entrar, agregale la palabra "open" a su <details>. -->
+
     <!-- 1. HORARIOS Y UBICACIÓN -->
-    <section id="horarios" class="info-bloque">
-      <h2>Horarios y ubicación</h2>
-      <p>Te esperamos en <strong>Sarmiento 1926</strong>.</p>
+    <details class="acordeon" id="horarios" open>
+      <summary>
+        <span class="acordeon-icono" aria-hidden="true">🕒</span>
+        <h2 class="acordeon-titulo">Horarios y ubicación</h2>
+      </summary>
+      <div class="acordeon-cuerpo">
+        <p>Te esperamos en <strong>Sarmiento 1926</strong>.</p>
 
-      <table class="horarios">
-        <caption class="solo-lectores">Horarios de atención</caption>
-        <tbody>
-          <tr>
-            <th scope="row">Lunes a viernes</th>
-            <td><span class="completar">[COMPLETAR: horario]</span></td>
-          </tr>
-          <tr>
-            <th scope="row">Sábados</th>
-            <td><span class="completar">[COMPLETAR: horario]</span></td>
-          </tr>
-          <tr>
-            <th scope="row">Domingos y feriados</th>
-            <td><span class="completar">[COMPLETAR: horario o "cerrado"]</span></td>
-          </tr>
-        </tbody>
-      </table>
+        <table class="horarios">
+          <caption class="solo-lectores">Horarios de atención</caption>
+          <tbody>
+            <tr>
+              <th scope="row">Lunes a viernes</th>
+              <td><span class="completar">[COMPLETAR: horario]</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Sábados</th>
+              <td><span class="completar">[COMPLETAR: horario]</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Domingos y feriados</th>
+              <td><span class="completar">[COMPLETAR: horario o "cerrado"]</span></td>
+            </tr>
+          </tbody>
+        </table>
 
-      <div class="mapa">
-        <iframe
-          title="Mapa con la ubicación de El Mercadito en Sarmiento 1926"
-          src="https://www.google.com/maps?q=Sarmiento+1926,+Concepci%C3%B3n+del+Uruguay,+Entre+R%C3%ADos,+Argentina&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen></iframe>
+        <div class="mapa">
+          <iframe
+            title="Mapa con la ubicación de El Mercadito en Sarmiento 1926"
+            src="https://www.google.com/maps?q=Sarmiento+1926,+Concepci%C3%B3n+del+Uruguay,+Entre+R%C3%ADos,+Argentina&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+        <p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Sarmiento+1926,+Concepci%C3%B3n+del+Uruguay,+Entre+R%C3%ADos,+Argentina" target="_blank" rel="noopener" class="enlace-mapa">Abrir en Google Maps</a>
+        </p>
       </div>
-      <p>
-        <a href="https://www.google.com/maps/search/?api=1&query=Sarmiento+1926,+Concepci%C3%B3n+del+Uruguay,+Entre+R%C3%ADos,+Argentina" target="_blank" rel="noopener" class="enlace-mapa">Abrir en Google Maps</a>
-      </p>
-    </section>
+    </details>
 
     <!-- 2. CÓMO PEDIR Y ENVÍOS -->
-    <section id="pedidos" class="info-bloque">
-      <h2>Cómo pedir y envíos</h2>
+    <details class="acordeon" id="pedidos">
+      <summary>
+        <span class="acordeon-icono" aria-hidden="true">🛵</span>
+        <h2 class="acordeon-titulo">Cómo pedir y envíos</h2>
+      </summary>
+      <div class="acordeon-cuerpo">
+        <h3>Armá tu pedido en tres pasos</h3>
+        <ol class="pasos">
+          <li>Entrá a cada sector y tocá <strong>Agregar</strong> en los productos que necesites.</li>
+          <li>Abrí el carrito, tocá <strong>Hacer pedido</strong> y completá tu nombre, cómo lo recibís y cómo pagás.</li>
+          <li>Enviá el pedido por WhatsApp y te lo confirmamos.</li>
+        </ol>
 
-      <h3>Armá tu pedido en tres pasos</h3>
-      <ol class="pasos">
-        <li>Entrá a cada sector y tocá <strong>Agregar</strong> en los productos que necesites.</li>
-        <li>Abrí el carrito, tocá <strong>Hacer pedido</strong> y completá tu nombre, cómo lo recibís y cómo pagás.</li>
-        <li>Enviá el pedido por WhatsApp y te lo confirmamos.</li>
-      </ol>
+        <h3>Retiro o envío</h3>
+        <dl class="datos">
+          <dt>Retiro en el local</dt>
+          <dd>Podés pasar a buscarlo por Sarmiento 1926.</dd>
 
-      <h3>Retiro o envío</h3>
-      <dl class="datos">
-        <dt>Retiro en el local</dt>
-        <dd>Podés pasar a buscarlo por Sarmiento 1926.</dd>
-
-        <dt>Envío a domicilio</dt>
-        <dd>
-          Zona de entrega: <span class="completar">[COMPLETAR: barrios o zona]</span><br>
-          Costo del envío: <span class="completar">[COMPLETAR: costo o "sin cargo"]</span><br>
-          Pedido mínimo: <span class="completar">[COMPLETAR: monto o "sin mínimo"]</span><br>
-          Horario de entregas: <span class="completar">[COMPLETAR]</span>
-        </dd>
-      </dl>
-    </section>
+          <dt>Envío a domicilio</dt>
+          <dd>
+            Zona de entrega: <span class="completar">[COMPLETAR: barrios o zona]</span><br>
+            Costo del envío: <span class="completar">[COMPLETAR: costo o "sin cargo"]</span><br>
+            Pedido mínimo: <span class="completar">[COMPLETAR: monto o "sin mínimo"]</span><br>
+            Horario de entregas: <span class="completar">[COMPLETAR]</span>
+          </dd>
+        </dl>
+      </div>
+    </details>
 
     <!-- 3. MEDIOS DE PAGO -->
-    <section id="pagos" class="info-bloque">
-      <h2>Medios de pago</h2>
-      <ul class="lista-simple">
-        <li>Efectivo</li>
-        <li>Transferencia</li>
-        <li>Tarjeta de débito (solo para retiro en el local)</li>
-      </ul>
-    </section>
+    <details class="acordeon" id="pagos">
+      <summary>
+        <span class="acordeon-icono" aria-hidden="true">💳</span>
+        <h2 class="acordeon-titulo">Medios de pago</h2>
+      </summary>
+      <div class="acordeon-cuerpo">
+        <ul class="lista-simple">
+          <li>Efectivo</li>
+          <li>Transferencia</li>
+          <li>Tarjeta de débito (solo para retiro en el local)</li>
+        </ul>
+      </div>
+    </details>
 
     <!-- 4. QUIÉNES SOMOS -->
-    <section id="nosotros" class="info-bloque">
-      <h2>Quiénes somos</h2>
-      <figure class="foto-local">
-        <!-- Agregá una foto del local en la carpeta imagenes con el nombre local.jpg.
-             Si el archivo no existe, esta foto no se muestra. -->
-        <img src="./imagenes/local.jpg" alt="Frente del local El Mercadito" onerror="this.parentElement.hidden=true">
-      </figure>
-      <p><span class="completar">[COMPLETAR: contá en 3 o 4 líneas la historia del negocio, desde cuándo atienden el barrio y qué los distingue.]</span></p>
-    </section>
-
-    <!-- 5. OFERTAS DE LA SEMANA -->
-    <section id="ofertas" class="info-bloque">
-      <h2>Ofertas de la semana</h2>
-      <p class="section-desc">Cambiamos las ofertas seguido. Pasá a verlas o consultanos por WhatsApp.</p>
-
-      <div class="promos">
-        <!-- Para sumar otra oferta, copiá todo el bloque <article class="promo"> ... </article> y cambiá el texto.
-             Para sacar una oferta vencida, borrá su bloque. -->
-        <article class="promo">
-          <h3><span class="completar">[COMPLETAR: producto en oferta]</span></h3>
-          <p><span class="completar">[COMPLETAR: detalle, precio y hasta cuándo vale]</span></p>
-        </article>
+    <details class="acordeon" id="nosotros">
+      <summary>
+        <span class="acordeon-icono" aria-hidden="true">🏪</span>
+        <h2 class="acordeon-titulo">Quiénes somos</h2>
+      </summary>
+      <div class="acordeon-cuerpo">
+        <figure class="foto-local">
+          <!-- Agregá una foto del local en la carpeta imagenes con el nombre local.jpg.
+               Si el archivo no existe, esta foto no se muestra. -->
+          <img src="./imagenes/local.jpg" alt="Frente del local El Mercadito" onerror="this.parentElement.hidden=true">
+        </figure>
+        <p><span class="completar">[COMPLETAR: contá en 3 o 4 líneas la historia del negocio, desde cuándo atienden el barrio y qué los distingue.]</span></p>
       </div>
-    </section>
+    </details>
 
-    <!-- 6. PREGUNTAS FRECUENTES -->
-    <section id="faq" class="info-bloque">
-      <h2>Preguntas frecuentes</h2>
+    <!-- 5. PREGUNTAS FRECUENTES -->
+    <details class="acordeon" id="faq">
+      <summary>
+        <span class="acordeon-icono" aria-hidden="true">❓</span>
+        <h2 class="acordeon-titulo">Preguntas frecuentes</h2>
+      </summary>
+      <div class="acordeon-cuerpo">
+        <details class="pregunta">
+          <summary>¿Cómo hago un pedido?</summary>
+          <p>Agregá los productos al carrito, tocá "Hacer pedido", completá tus datos y enviá el pedido por WhatsApp. Te lo confirmamos por el mismo chat.</p>
+        </details>
 
-      <details>
-        <summary>¿Cómo hago un pedido?</summary>
-        <p>Agregá los productos al carrito, tocá "Hacer pedido", completá tus datos y enviá el pedido por WhatsApp. Te lo confirmamos por el mismo chat.</p>
-      </details>
+        <details class="pregunta">
+          <summary>¿Qué medios de pago aceptan?</summary>
+          <p>Efectivo, transferencia y tarjeta de débito. La tarjeta de débito se puede usar solo si retirás en el local.</p>
+        </details>
 
-      <details>
-        <summary>¿Qué medios de pago aceptan?</summary>
-        <p>Efectivo, transferencia y tarjeta de débito. La tarjeta de débito se puede usar solo si retirás en el local.</p>
-      </details>
+        <details class="pregunta">
+          <summary>¿Cuánto cuestan los productos?</summary>
+          <p>Los precios pueden variar, así que te los confirmamos por WhatsApp cuando recibimos tu pedido.</p>
+        </details>
 
-      <details>
-        <summary>¿Cuánto cuestan los productos?</summary>
-        <p>Los precios pueden variar, así que te los confirmamos por WhatsApp cuando recibimos tu pedido.</p>
-      </details>
+        <details class="pregunta">
+          <summary>¿Tienen pan todo el día?</summary>
+          <p>Horneamos varias veces al día. <span class="completar">[COMPLETAR: horarios de horneada, si querés indicarlos]</span></p>
+        </details>
 
-      <details>
-        <summary>¿Tienen pan todo el día?</summary>
-        <p>Horneamos varias veces al día. <span class="completar">[COMPLETAR: horarios de horneada, si querés indicarlos]</span></p>
-      </details>
-
-      <details>
-        <summary>¿Hasta qué hora reciben pedidos?</summary>
-        <p><span class="completar">[COMPLETAR: horario límite para pedidos y entregas]</span></p>
-      </details>
-    </section>
+        <details class="pregunta">
+          <summary>¿Hasta qué hora reciben pedidos?</summary>
+          <p><span class="completar">[COMPLETAR: horario límite para pedidos y entregas]</span></p>
+        </details>
+      </div>
+    </details>
 
     <div class="info-section">
       <h2>¿Te quedó alguna duda?</h2>
@@ -174,5 +186,19 @@
   <footer>
     <p>&copy; El Mercadito - Despensa. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    // Si se entra desde el menú o con un link que termina en #seccion, se abre ese recuadro.
+    function abrirDesdeHash() {
+      var destino = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (destino && destino.matches("details.acordeon")) {
+        destino.open = true;
+        var reducir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        destino.scrollIntoView({ behavior: reducir ? "auto" : "smooth", block: "start" });
+      }
+    }
+    window.addEventListener("hashchange", abrirDesdeHash);
+    abrirDesdeHash();
+  </script>
 </body>
 </html>
