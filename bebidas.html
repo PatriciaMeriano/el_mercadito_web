@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bebidas & Gaseosas - El Mercadito</title>
   <link rel="stylesheet" href="estilos.css">
-  
+  <link rel="stylesheet" href="carrito.css">
+  <script src="carrito.js" defer></script>
 </head>
 <body>
   <header>
@@ -31,6 +32,9 @@
           <p>Variedades en botellas retornables y descartables de 1.5L, 2.25L y 3L.</p>
           <div class="product-footer">
             <span class="product-price">Consultar</span>
+            <button type="button" class="btn-buy btn-agregar"
+                    data-id="bebidas-gaseosas"
+                    data-nombre="Gaseosas Línea Líder">Agregar</button>
             <a href="https://wa.me/5493442000000?text=Hola!%20Quería%20pedir%20Gaseosas" target="_blank" class="btn-buy">Pedir</a>
           </div>
         </div>
@@ -42,6 +46,9 @@
           <p>Cervezas bien frías en latas de 473ml y porrón o litro retornable.</p>
           <div class="product-footer">
             <span class="product-price">Frías</span>
+            <button type="button" class="btn-buy btn-agregar"
+                    data-id="bebidas-cervezas"
+                    data-nombre="Cervezas en Lata y Botella">Agregar</button>
             <a href="https://wa.me/5493442000000?text=Hola!%20Quería%20pedir%20Cervezas" target="_blank" class="btn-buy">Pedir</a>
           </div>
         </div>
@@ -53,6 +60,9 @@
           <p>Agua con y sin gas, aguas saborizadas de frutas en presentación de 500ml y 1.5L.</p>
           <div class="product-footer">
             <span class="product-price">Variedad</span>
+            <button type="button" class="btn-buy btn-agregar"
+                    data-id="bebidas-aguas"
+                    data-nombre="Aguas Minerales y Saborizadas">Agregar</button>
             <a href="https://wa.me/5493442000000?text=Hola!%20Quería%20pedir%20Agua" target="_blank" class="btn-buy">Pedir</a>
           </div>
         </div>

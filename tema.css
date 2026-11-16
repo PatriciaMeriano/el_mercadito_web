@@ -1,0 +1,209 @@
+/* Tema de El Mercadito: los colores salen del frente del local.
+   Se carga DESPUÉS de estilos.css en cada página, así que solo pisa
+   colores, bordes, sombras y detalles. No cambia la estructura ni los tamaños. */
+
+:root {
+  --mc-amarillo: #eed742;       /* amarillo del título y del logo */
+  --mc-amarillo-claro: #fff3b0;
+  --mc-naranja: #f5a623;
+  --mc-rojo: #c8321f;           /* rojo de los carteles */
+  --mc-rojo-oscuro: #a32616;
+  --mc-tinta: #2b2118;          /* texto: marrón casi negro, más cálido que el negro puro */
+  --mc-crema: #fff8e7;
+  --mc-borde: #eadfb8;
+}
+
+body {
+  background: var(--mc-crema);
+  color: var(--mc-tinta);
+}
+
+/* ---------- Encabezado ---------- */
+header {
+  margin-bottom: 6px;
+  border-bottom: 6px solid var(--mc-amarillo);
+  box-shadow: 0 6px 0 var(--mc-rojo); /* franja roja debajo de la amarilla */
+}
+
+header h1 {
+  color: var(--mc-amarillo);
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+header p {
+  color: var(--mc-amarillo-claro);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7); /* se lee mejor sobre la foto */
+}
+
+/* ---------- Títulos ---------- */
+.section-title,
+.info-bloque h2 {
+  color: var(--mc-tinta);
+  text-decoration: underline;
+  text-decoration-color: var(--mc-amarillo);
+  text-decoration-thickness: 6px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 6px;
+}
+
+.section-desc {
+  color: #5b4b3a;
+}
+
+.back-btn {
+  color: var(--mc-rojo);
+  font-weight: 700;
+}
+
+.back-btn:hover {
+  color: var(--mc-rojo-oscuro);
+}
+
+/* ---------- Tarjetas de sectores (index) ---------- */
+.card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--mc-borde);
+  border-top: 6px solid var(--mc-amarillo);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(43, 33, 24, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-top-color 0.2s ease;
+}
+
+.card-link:hover .card,
+.card-link:focus-visible .card {
+  border-top-color: var(--mc-rojo);
+  box-shadow: 0 10px 24px rgba(43, 33, 24, 0.18);
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  color: var(--mc-tinta);
+}
+
+.badge-click {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--mc-amarillo);
+  color: var(--mc-tinta);
+  font-weight: 700;
+}
+
+/* ---------- Productos ---------- */
+.scroll-container {
+  scrollbar-color: var(--mc-rojo) var(--mc-borde);
+}
+
+.product-card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--mc-borde);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(43, 33, 24, 0.1);
+}
+
+.product-content h3 {
+  color: var(--mc-tinta);
+}
+
+.product-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-price {
+  margin-right: auto;
+  color: var(--mc-rojo-oscuro);
+  font-weight: 700;
+}
+
+/* "Agregar" es la acción principal (rojo lleno); "Pedir" queda como secundaria (borde) */
+.btn-buy {
+  display: inline-block;
+  padding: 9px 16px;
+  border: 2px solid var(--mc-rojo);
+  border-radius: 999px;
+  background: var(--mc-rojo);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn-buy:hover {
+  border-color: var(--mc-rojo-oscuro);
+  background: var(--mc-rojo-oscuro);
+}
+
+a.btn-buy {
+  background: transparent;
+  color: var(--mc-rojo);
+}
+
+a.btn-buy:hover {
+  background: var(--mc-rojo);
+  color: #fff;
+}
+
+.btn-buy:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* ---------- Bloque de contacto ---------- */
+.info-section {
+  border-bottom: 6px solid var(--mc-rojo);
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--mc-amarillo) 0%, var(--mc-naranja) 100%);
+  color: var(--mc-tinta);
+}
+
+.info-section h2,
+.info-section p {
+  color: var(--mc-tinta);
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+  border-top: 6px solid var(--mc-amarillo);
+  background: var(--mc-tinta);
+  color: var(--mc-amarillo-claro);
+}
+
+footer p {
+  color: inherit;
+}
+
+/* ---------- Accesibilidad ---------- */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--mc-rojo);
+  outline-offset: 2px;
+}
+
+.info-section a:focus-visible {
+  outline-color: var(--mc-tinta);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .btn-buy {
+    transition: none;
+  }
+
+  .card-link:hover .card,
+  .card-link:focus-visible .card {
+    transform: none;
+  }
+}

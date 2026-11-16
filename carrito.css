@@ -1,0 +1,293 @@
+/* Estilos del carrito de El Mercadito.
+   Cambiá estos colores para que combinen con estilos.css */
+:root {
+  --carrito-color: #c8321f;
+  --carrito-color-texto: #ffffff;
+  --carrito-fondo-panel: #ffffff;
+  --carrito-texto: #222222;
+  --carrito-borde: #dddddd;
+}
+
+.carrito-boton {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  background: var(--carrito-color);
+  color: var(--carrito-color-texto);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.carrito-boton:focus-visible,
+.carrito-panel button:focus-visible,
+.btn-agregar:focus-visible {
+  outline: 3px solid #2b2118;
+  outline-offset: 2px;
+}
+
+.carrito-contador {
+  min-width: 24px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--carrito-color-texto);
+  color: var(--carrito-color);
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.carrito-fondo {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.carrito-fondo.abierto {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carrito-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  width: min(380px, 100%);
+  height: 100%;
+  background: var(--carrito-fondo-panel);
+  color: var(--carrito-texto);
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+}
+
+.carrito-panel.abierto {
+  transform: translateX(0);
+}
+
+.carrito-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid var(--carrito-borde);
+}
+
+.carrito-cabecera h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.carrito-cerrar {
+  border: none;
+  background: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  color: inherit;
+}
+
+.carrito-lista {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.carrito-vacio {
+  padding: 24px 16px;
+  color: #666;
+}
+
+.carrito-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--carrito-borde);
+}
+
+.carrito-item-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.carrito-item-nombre {
+  font-weight: 600;
+}
+
+.carrito-item-controles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carrito-item-controles button {
+  min-width: 32px;
+  height: 32px;
+  border: 1px solid var(--carrito-borde);
+  border-radius: 6px;
+  background: #f6f6f6;
+  font: inherit;
+  cursor: pointer;
+}
+
+.carrito-item-controles .carrito-quitar {
+  margin-left: auto;
+  padding: 0 10px;
+  border-color: transparent;
+  background: none;
+  color: #a33;
+  text-decoration: underline;
+}
+
+.carrito-pie {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-top: 1px solid var(--carrito-borde);
+}
+
+.carrito-total {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+}
+
+.carrito-pie button {
+  padding: 12px;
+  border: 1px solid var(--carrito-color);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.carrito-vaciar {
+  background: none;
+  color: var(--carrito-color);
+}
+
+.carrito-enviar {
+  background: var(--carrito-color);
+  color: var(--carrito-color-texto);
+}
+
+.carrito-pie button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carrito-panel,
+  .carrito-fondo {
+    transition: none;
+  }
+}
+
+/* ---------- Pantalla previa al envío ---------- */
+.carrito-panel [hidden] {
+  display: none !important;
+}
+
+.carrito-datos {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.carrito-datos label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.carrito-datos input[type="text"],
+.carrito-datos select,
+.carrito-datos textarea {
+  padding: 10px;
+  border: 1px solid var(--carrito-borde);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 400;
+  color: var(--carrito-texto);
+  background: #fff;
+}
+
+.carrito-datos input[type="text"]:focus-visible,
+.carrito-datos select:focus-visible,
+.carrito-datos textarea:focus-visible {
+  outline: 3px solid #2b2118;
+  outline-offset: 1px;
+}
+
+.carrito-datos fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.carrito-datos legend {
+  padding: 0;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.carrito-datos .carrito-opcion {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+}
+
+.carrito-error {
+  min-height: 1.2em;
+  margin: 0;
+  color: #a33;
+  font-weight: 600;
+}
+
+.carrito-datos button {
+  padding: 12px;
+  border: 1px solid var(--carrito-color);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.carrito-confirmar {
+  background: var(--carrito-color);
+  color: var(--carrito-color-texto);
+}
+
+.carrito-volver {
+  background: none;
+  color: var(--carrito-color);
+}
+
+.carrito-ayuda {
+  font-weight: 400;
+  color: #555;
+}

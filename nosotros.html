@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horarios, envíos y más - El Mercadito</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="nosotros.css">
+  <link rel="stylesheet" href="carrito.css">
+  <script src="carrito.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="./imagenes/logo.jpeg" alt="Logo El Mercadito Despensa">
+    </div>
+    <h1>EL MERCADITO</h1>
+    <p>Despensa & Almacén de Barrio</p>
+    <p>Sarmiento 1926</p>
+    <p>WhatsApp 3442 311926</p>
+  </header>
+
+  <div class="container">
+    <div class="back-nav"><a href="index.html" class="back-btn">&larr; Volver al inicio</a></div>
+    <h2 class="section-title">Horarios, envíos y más</h2>
+
+    <nav class="info-nav" aria-label="Secciones de esta página">
+      <a href="#horarios">Horarios y ubicación</a>
+      <a href="#pedidos">Cómo pedir</a>
+      <a href="#pagos">Medios de pago</a>
+      <a href="#nosotros">Quiénes somos</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#faq">Preguntas frecuentes</a>
+    </nav>
+
+    <!-- 1. HORARIOS Y UBICACIÓN -->
+    <section id="horarios" class="info-bloque">
+      <h2>Horarios y ubicación</h2>
+      <p>Te esperamos en <strong>Sarmiento 1926</strong>.</p>
+
+      <table class="horarios">
+        <caption class="solo-lectores">Horarios de atención</caption>
+        <tbody>
+          <tr>
+            <th scope="row">Lunes a viernes</th>
+            <td><span class="completar">[COMPLETAR: horario]</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Sábados</th>
+            <td><span class="completar">[COMPLETAR: horario]</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Domingos y feriados</th>
+            <td><span class="completar">[COMPLETAR: horario o "cerrado"]</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mapa">
+        <iframe
+          title="Mapa con la ubicación de El Mercadito en Sarmiento 1926"
+          src="https://www.google.com/maps?q=Sarmiento+1926,+Concepci%C3%B3n+del+Uruguay,+Entre+R%C3%ADos,+Argentina&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+      <p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Sarmiento+1926,+Concepci%C3%B3n+del+Uruguay,+Entre+R%C3%ADos,+Argentina" target="_blank" rel="noopener" class="enlace-mapa">Abrir en Google Maps</a>
+      </p>
+    </section>
+
+    <!-- 2. CÓMO PEDIR Y ENVÍOS -->
+    <section id="pedidos" class="info-bloque">
+      <h2>Cómo pedir y envíos</h2>
+
+      <h3>Armá tu pedido en tres pasos</h3>
+      <ol class="pasos">
+        <li>Entrá a cada sector y tocá <strong>Agregar</strong> en los productos que necesites.</li>
+        <li>Abrí el carrito, tocá <strong>Hacer pedido</strong> y completá tu nombre, cómo lo recibís y cómo pagás.</li>
+        <li>Enviá el pedido por WhatsApp y te lo confirmamos.</li>
+      </ol>
+
+      <h3>Retiro o envío</h3>
+      <dl class="datos">
+        <dt>Retiro en el local</dt>
+        <dd>Podés pasar a buscarlo por Sarmiento 1926.</dd>
+
+        <dt>Envío a domicilio</dt>
+        <dd>
+          Zona de entrega: <span class="completar">[COMPLETAR: barrios o zona]</span><br>
+          Costo del envío: <span class="completar">[COMPLETAR: costo o "sin cargo"]</span><br>
+          Pedido mínimo: <span class="completar">[COMPLETAR: monto o "sin mínimo"]</span><br>
+          Horario de entregas: <span class="completar">[COMPLETAR]</span>
+        </dd>
+      </dl>
+    </section>
+
+    <!-- 3. MEDIOS DE PAGO -->
+    <section id="pagos" class="info-bloque">
+      <h2>Medios de pago</h2>
+      <ul class="lista-simple">
+        <li>Efectivo</li>
+        <li>Transferencia</li>
+        <li>Tarjeta de débito (solo para retiro en el local)</li>
+      </ul>
+    </section>
+
+    <!-- 4. QUIÉNES SOMOS -->
+    <section id="nosotros" class="info-bloque">
+      <h2>Quiénes somos</h2>
+      <figure class="foto-local">
+        <!-- Agregá una foto del local en la carpeta imagenes con el nombre local.jpg.
+             Si el archivo no existe, esta foto no se muestra. -->
+        <img src="./imagenes/local.jpg" alt="Frente del local El Mercadito" onerror="this.parentElement.hidden=true">
+      </figure>
+      <p><span class="completar">[COMPLETAR: contá en 3 o 4 líneas la historia del negocio, desde cuándo atienden el barrio y qué los distingue.]</span></p>
+    </section>
+
+    <!-- 5. OFERTAS DE LA SEMANA -->
+    <section id="ofertas" class="info-bloque">
+      <h2>Ofertas de la semana</h2>
+      <p class="section-desc">Cambiamos las ofertas seguido. Pasá a verlas o consultanos por WhatsApp.</p>
+
+      <div class="promos">
+        <!-- Para sumar otra oferta, copiá todo el bloque <article class="promo"> ... </article> y cambiá el texto.
+             Para sacar una oferta vencida, borrá su bloque. -->
+        <article class="promo">
+          <h3><span class="completar">[COMPLETAR: producto en oferta]</span></h3>
+          <p><span class="completar">[COMPLETAR: detalle, precio y hasta cuándo vale]</span></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. PREGUNTAS FRECUENTES -->
+    <section id="faq" class="info-bloque">
+      <h2>Preguntas frecuentes</h2>
+
+      <details>
+        <summary>¿Cómo hago un pedido?</summary>
+        <p>Agregá los productos al carrito, tocá "Hacer pedido", completá tus datos y enviá el pedido por WhatsApp. Te lo confirmamos por el mismo chat.</p>
+      </details>
+
+      <details>
+        <summary>¿Qué medios de pago aceptan?</summary>
+        <p>Efectivo, transferencia y tarjeta de débito. La tarjeta de débito se puede usar solo si retirás en el local.</p>
+      </details>
+
+      <details>
+        <summary>¿Cuánto cuestan los productos?</summary>
+        <p>Los precios pueden variar, así que te los confirmamos por WhatsApp cuando recibimos tu pedido.</p>
+      </details>
+
+      <details>
+        <summary>¿Tienen pan todo el día?</summary>
+        <p>Horneamos varias veces al día. <span class="completar">[COMPLETAR: horarios de horneada, si querés indicarlos]</span></p>
+      </details>
+
+      <details>
+        <summary>¿Hasta qué hora reciben pedidos?</summary>
+        <p><span class="completar">[COMPLETAR: horario límite para pedidos y entregas]</span></p>
+      </details>
+    </section>
+
+    <div class="info-section">
+      <h2>¿Te quedó alguna duda?</h2>
+      <p>Escribinos por WhatsApp y te respondemos.</p>
+      <div class="cta-container">
+        <a href="https://wa.me/5493442311926" target="_blank" rel="noopener" class="btn btn-whatsapp">Escribir por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; El Mercadito - Despensa. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

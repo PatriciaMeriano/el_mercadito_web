@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bebidas - El Mercadito</title>
+  <link rel="stylesheet" href="estilos.css">
+  <!-- 1) Agregar el CSS del carrito -->
+  <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+
+  <h1>Bebidas</h1>
+
+  <!-- 2) En cada producto, un botón con clase "btn-agregar" y sus datos.
+          El data-id tiene que ser único por producto.
+          El data-precio va solo con números (sin $ ni puntos de miles). -->
+  <article class="producto">
+    <img src="imagenes/gaseosa.jpg" alt="Gaseosa cola 2,25 L">
+    <h2>Gaseosa cola 2,25 L</h2>
+    <p>$2500</p>
+    <button type="button" class="btn-agregar"
+            data-id="bebidas-gaseosa-cola-225"
+            data-nombre="Gaseosa cola 2,25 L"
+            data-precio="2500">Agregar al carrito</button>
+  </article>
+
+  <article class="producto">
+    <img src="imagenes/agua.jpg" alt="Agua mineral 1,5 L">
+    <h2>Agua mineral 1,5 L</h2>
+    <p>$1200</p>
+    <button type="button" class="btn-agregar"
+            data-id="bebidas-agua-15"
+            data-nombre="Agua mineral 1,5 L"
+            data-precio="1200">Agregar al carrito</button>
+  </article>
+
+  <!-- 3) Al final del body, el script del carrito -->
+  <script src="carrito.js"></script>
+</body>
+</html>

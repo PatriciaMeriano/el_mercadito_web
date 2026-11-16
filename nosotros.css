@@ -1,0 +1,180 @@
+/* Estilos extra de nosotros.html.
+   Se cargan después de estilos.css; no modifican nada de las otras páginas. */
+
+.info-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 24px;
+}
+
+.info-nav a {
+  padding: 8px 14px;
+  border: 1px solid #eadfb8;
+  background: #fff;
+  border-radius: 999px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.info-nav a:hover,
+.info-nav a:focus-visible {
+  border-color: var(--carrito-color, #c8321f);
+  color: var(--carrito-color, #c8321f);
+}
+
+.info-bloque {
+  margin: 0 0 32px;
+  padding-top: 8px;
+  scroll-margin-top: 16px;
+}
+
+.info-bloque h2 {
+  margin: 0 0 12px;
+}
+
+.info-bloque h3 {
+  margin: 20px 0 8px;
+}
+
+.info-bloque p {
+  line-height: 1.55;
+}
+
+/* Horarios */
+.horarios {
+  width: 100%;
+  max-width: 520px;
+  margin: 12px 0 20px;
+  border-collapse: collapse;
+}
+
+.horarios th,
+.horarios td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.horarios th {
+  font-weight: 600;
+}
+
+/* Mapa */
+.mapa {
+  max-width: 720px;
+}
+
+.mapa iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
+  border-radius: 8px;
+}
+
+.enlace-mapa {
+  color: var(--carrito-color, #c8321f);
+  font-weight: 600;
+}
+
+/* Pasos y listas */
+.pasos {
+  margin: 0;
+  padding-left: 22px;
+  line-height: 1.6;
+}
+
+.pasos li + li {
+  margin-top: 6px;
+}
+
+.datos dt {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.datos dd {
+  margin: 4px 0 0;
+  line-height: 1.6;
+}
+
+.lista-simple {
+  margin: 0;
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+/* Quiénes somos */
+.foto-local {
+  margin: 0 0 16px;
+  max-width: 720px;
+}
+
+.foto-local img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Ofertas */
+.promos {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.promo {
+  padding: 16px;
+  border: 1px solid #eadfb8;
+  border-top: 5px solid #eed742;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.promo h3 {
+  margin: 0 0 8px;
+}
+
+.promo p {
+  margin: 0;
+}
+
+/* Preguntas frecuentes */
+#faq details {
+  max-width: 720px;
+  border-bottom: 1px solid #ddd;
+}
+
+#faq summary {
+  padding: 14px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#faq summary:focus-visible {
+  outline: 3px solid #2b2118;
+  outline-offset: 2px;
+}
+
+#faq details p {
+  margin: 0 0 14px;
+}
+
+/* Texto que falta completar: resaltado para no olvidarse de reemplazarlo.
+   Buscá "COMPLETAR" en VS Code (Ctrl + Shift + F) y borrá estas marcas antes de publicar. */
+.completar {
+  background: #fff3a3;
+  color: #222;
+}
+
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
